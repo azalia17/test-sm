@@ -22,6 +22,8 @@ class MainActivity : AppCompatActivity() {
             factory
         }
 
+//        mainBinding.tvName.text = mainViewModel.getUser().observe().toString()
+
         val userName = intent.getStringExtra("extra_user")
 
         mainBinding.btnChoose.setOnClickListener {

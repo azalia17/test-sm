@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient"
+    android:padding="20dp"
+    tools:context=".ui.login.LoginActivity">
+
+    <ImageView
+        android:id="@+id/profile_circle"
+        android:layout_width="116dp"
+        android:layout_height="116dp"
+        android:alpha=".7"
+        android:src="@drawable/ic_profile"
+        app:layout_constraintBottom_toTopOf="@id/et_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:tint="@color/white"
+        android:src="@drawable/baseline_person_add_alt_1_24"
+        app:layout_constraintStart_toStartOf="@id/profile_circle"
+        app:layout_constraintEnd_toEndOf="@id/profile_circle"
+        app:layout_constraintTop_toTopOf="@id/profile_circle"
+        app:layout_constraintBottom_toBottomOf="@id/profile_circle"/>
+
+    <com.azalia.suitmediatestkm.ui.CustomEditText
+        android:id="@+id/et_name"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/edit_round"
+        android:hint="@string/name"
+        android:paddingHorizontal="16dp"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintStart_toStartOf="@id/et_palindrome"
+        app:layout_constraintEnd_toEndOf="@id/et_palindrome"
+        app:layout_constraintBottom_toTopOf="@id/et_palindrome"/>
+
+    <com.azalia.suitmediatestkm.ui.CustomEditText
+        android:id="@+id/et_palindrome"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:hint="@string/enter_palindrome"
+        android:paddingHorizontal="16dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/edit_round"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.azalia.suitmediatestkm.ui.CustomButton
+        android:id="@+id/btn_check"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/button_round"
+        android:text="@string/check"
+        android:enabled="true"
+        android:layout_marginTop="40dp"
+        app:layout_constraintTop_toBottomOf="@id/et_palindrome"
+        app:layout_constraintStart_toStartOf="@id/et_palindrome"
+        app:layout_constraintEnd_toEndOf="@id/et_palindrome"/>
+
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="@string/next"
+        android:background="@drawable/button_round"
+        android:enabled="true"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@id/btn_check"
+        app:layout_constraintStart_toStartOf="@id/btn_check"
+        app:layout_constraintEnd_toEndOf="@id/btn_check"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
